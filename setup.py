@@ -1,7 +1,10 @@
+import os
 from setuptools import setup,find_packages
-
 from authomatic import six
 
+README = 'Authorization / authentication client library for - Python web applications'
+with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
+    README = readme.read()
 
 setup(
     name='Authomatic',
@@ -12,7 +15,7 @@ setup(
     author_email='peterhudec@peterhudec.com',
     description=('Authorization / authentication client library for '
                  'Python web applications'),
-    long_description=open('README.rst').read(),
+    long_description=README,
     keywords='authorization authentication oauth openid',
     url='http://peterhudec.github.io/authomatic',
     license = 'MIT',
